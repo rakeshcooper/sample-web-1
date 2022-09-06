@@ -1,0 +1,405 @@
+console.log("Cooper is my dog");
+
+// window.alert("I REALLY LIKE BRIYANI")
+
+//This is a comment
+
+/* multi line comments*/
+
+
+// variable (var, let,const)
+/*
+let name
+name = "cooper";
+let age = 21;
+age = age + 1;
+
+let dog = true;
+
+console.log("my name is",name ,"and my age is",age,"years old");
+console.log("Am i a dog",dog);
+
+
+document.getElementById("p1").innerHTML = "Hello "+ name;
+document.getElementById("p2").innerHTML = "Your are "+age+" years old";
+document.getElementById("p3").innerHTML = "Am i dog "+dog;
+
+
+let num;
+num = 25;
+num -= 3;
+
+
+sum = 2+4 * (2+5);
+
+console.log(sum)
+
+
+console.log(num);
+
+
+// user input
+//let user = window.prompt("pls enter name");
+//console.log(user);
+
+
+let username;
+
+document.getElementById('myButton').onclick = function() {
+
+    username = document.getElementById('myText').value;
+    console.log(username);
+    document.getElementById("myLabel").innerHTML = "Hello "+ username;
+}
+
+
+// datatypes
+
+let age = window.prompt("Enter your age");
+
+age = Number(age);
+age += 1;
+console.log(typeof age);
+
+console.log("your are officially",age,"years old");
+
+
+
+// type conversion changing another data types
+let x = "3.15";
+let y =  3.15;
+let z = '';
+
+x = Number(x);
+y = String(y);
+z = Boolean(z);
+
+
+console.log(x, typeof x);
+console.log(y, typeof y);
+console.log(z, typeof z);
+
+
+
+
+// const cannot be changable
+
+const pi = 3.14;
+let radius;
+let circum;
+
+radius = window.prompt("Enter your radius value :");
+radius = Number(radius);
+circum = 2*pi*radius;
+console.log("Your circum is",circum);
+
+
+let x = 3.14;
+let y = 5;
+let z = 8;
+let maximum;
+let minimum;
+// x = Math.round(x);
+//x = Math.floor(x);
+//x = Math.ceil(x)
+//x = Math.pow(x, 2)
+//x = Math.sqrt(x);
+//x = Math.abs(x);
+maximum = Math.max(x ,y ,z);
+minimum = Math.min(x ,y ,z)
+console.log("maximum",maximum);
+console.log("minimum",minimum);
+
+
+let a;
+let b;
+let c;
+a = window.prompt("Enter side A");
+a = Number(a);
+
+b = window.prompt("Enter side B");
+b = Number(b);
+
+
+c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2)); 
+console.log("Side C:",c) 
+
+
+let a;
+let b;
+let c;
+
+document.getElementById("submitButton").onclick = function() {
+    a = document.getElementById("atextbox").value;
+    a = Number(a);
+
+    b = document.getElementById("btextbox").value;
+    b = Number(b);
+
+    c = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
+    document.getElementById("cLabel").innerHTML = "Side C:" +c;
+}
+
+let count = 0;
+document.getElementById("decreaseBtn").onclick = function() {
+    count -=1;
+    document.getElementById("countLabel").innerHTML = count; 
+}
+document.getElementById("resetBtn").onclick = function() {
+    count = 0;
+    document.getElementById("countLabel").innerHTML = count; 
+}
+
+document.getElementById("increaseBtn").onclick = function() {
+    count +=1;
+    document.getElementById("countLabel").innerHTML = count;
+}
+
+
+
+// useful string properties and method
+
+
+//let username = "rkcooper";
+//let phonenumber = "123/456/7890";
+
+//console.log(username);
+//console.log(username.charAt(2));
+//console.log(username.indexOf("o"));
+//console.log(username.lastIndexOf("o"));
+//username = username.toUpperCase();
+//console.log(username.toLocaleLowerCase());
+//phonenumber = phonenumber.replaceAll("/", "-")
+//console.log(phonenumber); 
+
+//slice() extracts the sentence
+//        and returns new string, without modifying the original string
+
+
+let fullname = "RK cooper"
+let firstname;
+let lastname;
+
+//firstname = fullname.slice(0, 2);
+//lastname = fullname.slice(3);
+// slice using index below
+firstname = fullname.slice(0 ,fullname.indexOf(" "));
+lastname = fullname.slice(fullname.indexOf(" ")+1);
+console.log(fullname);
+console.log(firstname);
+console.log(lastname);
+
+
+// method chaining  = calling one method to another 
+//                    in one contineous line of code
+let username = "rkcooper";
+let letter = username.charAt(0).toUpperCase();
+
+console.log(letter);
+
+
+// if statement
+
+let age = 70;
+if(age >= 65){
+    console.log("you are senior citizen");
+}
+else if(age < 0){
+    console.log("you still yet to be born");
+}
+else if(age >= 18){
+    console.log("Your are an adult!!!!!!!!!");
+}
+else{
+    console.log("you are an child!!!!!");
+}
+
+
+let online = false;
+
+if(online){
+    console.log("you are online");  
+}
+else {
+    console.log("You are offline"); 
+}
+
+
+document.getElementById("btn").onclick = function() {
+
+    const Checkbox = document.getElementById("check");
+    const Visarad = document.getElementById("visa");
+    const Masterrad = document.getElementById("master");
+    const paytmrad = document.getElementById("paytm");
+    
+    if(Checkbox.checked){
+        console.log("You are subscribe!!!..");
+    }
+
+    else {
+        console.log("You are NOT subscribe!!!..")   
+    }
+
+
+    if(Visarad.checked){
+        console.log("You are selected visa !!!");       
+    }
+
+    else if(Masterrad.checked){
+        console.log("You are selected master !!!");       
+    }
+
+    else if(paytmrad.checked){
+        console.log("You are selected paytm !!!");       
+    }
+
+    else {
+        console.log("please select payment method...");
+    }
+}
+
+
+
+// switch statement examines value
+// for a match against many case clause
+// more effecient that may if else statement
+
+
+let grade = "briyani";
+
+switch(grade){
+    case "A":
+        console.log("you did great");
+        break;
+       
+    
+    case "B":
+        console.log("you did good");
+        break;
+    
+    
+    case "C":
+        console.log("you did fine");
+        break;
+        
+    
+    case "D":
+        console.log("you barely passed");
+        break;
+        
+    
+    case "F":
+        console.log("!!! YOU FAILED !!!");
+        break;
+        
+    default:
+        console.log(grade,"is not a grade!!!!");    
+}
+
+
+
+let grade = 82;
+
+switch(true){
+    case grade >= 90:
+        console.log("you did great");
+        break;
+       
+    
+    case grade >= 80:
+        console.log("you did good");
+        break;
+    
+    
+    case great >= 70:
+        console.log("you did fine");
+        break;
+        
+    
+    case great >= 60:
+        console.log("you barely passed");
+        break;
+        
+    
+    case grade > 60:
+        console.log("!!! YOU FAILED !!!");
+        break;
+        
+    default:
+        console.log(grade,"is not a grade!!!!");    
+}
+
+
+
+// checks the conditions both concurrently
+// AND && both condition must be true
+// OR || either condition can be true
+
+
+let temp;
+temp = 19;
+let sunny = true;
+if(temp > 0 && temp < 30 && sunny){
+    console.log("The weather is good");
+}
+
+else{
+    console.log("The weather is bad");
+}
+
+
+let temp;
+temp = 15;
+if(temp <= 0 || temp >= 30){
+    console.log("The weather is bad");
+}
+
+else{
+    console.log("The weather is good");
+}
+
+
+// not logical operator
+// used to revese boolean value
+// true to false and false to true
+
+let temp = -15;
+let sunny = true;
+
+if(!(temp > 0)){
+    console.log("it is cold outside"); 
+}
+else{
+    console.log("it is hot outside");
+}
+
+if(!sunny){
+    console.log("it is cloudy ouside");
+}
+else{
+    console.log("it is sunny ouside");
+}
+
+
+
+// while loop loop through until the condition is true
+
+let username ="";
+
+while(username == "" || username == null){
+    username = window.prompt("Enter the username");
+} 
+console.log("Hello",username);
+
+*/
+
+
+// do while loop = do something then
+//       then check the condition if it is true
+
+let username;
+
+do{
+    username = window.prompt("Enter the username");
+}while(username == "") 
+console.log("Hello",username);
